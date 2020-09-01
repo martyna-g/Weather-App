@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import SearchBar from './SearchBar';
+import Results from '../conteiners/Results';
+import Forecast from '../conteiners/Forecast';
 import '../App.css';
 
 function App() {
   return (
-    <div className="App">
-    </div>
+    <Fragment>
+      <SearchBar />
+      <Results />
+      <Forecast />
+    </Fragment>
   );
 }
 
