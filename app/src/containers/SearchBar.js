@@ -1,18 +1,33 @@
-import React from 'react';
-import {fetchWeather} from '../actions/actions'
+import React, { useState } from "react";
+import { connect } from "react-redux";
+import { fetchWeatherAPI } from "../actions/fetchWeather";
 
-const SearchBar = () => {
-    const handleSubmit = e => {
-        e.preventDefault();
-    }
+export const SearchBar = (props) => {
+  const [cityName, setCityName] = useState("");
+
+  const handleChange = (e) => {
+    setCityName(e.target.value);
+  };
   return (
     <div>
       <form>
-        <input type="text" value="" placeholder="Enter city name" onChange={} />
-        <button type="submit" onClick={}>Submit</button>
+        <input
+          type="text"
+          placeholder="Enter city name"
+          onChange={handleChange}
+        />
+        <button type="button" onClick={() => props.fetchWeather(cityName)}>
+          Submit
+        </button>
       </form>
     </div>
   );
 };
 
-export default SearchBar;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    fetchWeather: (city) => dispatch(fetchWeatherAPI(city)),
+  };
+};
+
+export default connect(null, mapDispatchToProps)(SearchBar);
