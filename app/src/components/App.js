@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
-import SearchBar from './SearchBar';
-import Results from '../conteiners/Results';
-import Forecast from '../conteiners/Forecast';
+import SearchBar from '../containers/SearchBar';
+import Results from '../containers/Results';
+import Forecast from '../containers/Forecast';
 import '../App.css';
 
 function App() {
