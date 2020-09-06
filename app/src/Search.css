@@ -1,0 +1,33 @@
+.searchBar {
+    text-align: center;
+    margin-top: 40px;
+}
+form {
+    box-sizing: border-box;
+}
+#searchInput {
+    width: 500px;
+    max-width: 90%;
+    height: 35px;
+    border-radius: 30px;
+    border-color: rgb(0, 80, 184);
+    font-size: 20px;
+}
+#searchInput:focus {
+outline: none;
+}
+#searchButton {
+    height: 41px;
+    width: 80px;
+    margin-left: -80px;
+    border-radius: 0 30px 30px 0;
+    border-color: rgb(0, 80, 184);
+    outline: none;
+    color: white;
+    background-color: rgb(37, 128, 247);
+    font-size: 20px;
+}
+#searchButton:hover {
+    background-color: rgb(0, 80, 184);
+    cursor: pointer;
+}
