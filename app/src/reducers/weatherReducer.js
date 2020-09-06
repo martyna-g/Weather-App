@@ -14,9 +14,10 @@ const initialState = {
   },
   weather: {
     id: 0,
-    main: "",
+    main: "Clear",
     description: "",
   },
+  weatherFetched: false
 };
 
 const weatherReducer = (state = initialState, action) => {
@@ -28,6 +29,7 @@ const weatherReducer = (state = initialState, action) => {
         sys: action.payload.sys,
         weather: action.payload.weather[0],
         main: action.payload.main,
+        weatherFetched: true
       };
     default:
       return state;

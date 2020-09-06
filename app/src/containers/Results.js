@@ -4,16 +4,17 @@ import "../Results.css";
 
 const Results = (props) => {
   return (
-    <div className="results">
+    <div
+      className="results"
+      style={{ visibility: props.fetched ? "visible" : "hidden" }}
+    >
       <div className="loacation">
         <p id="location">
           {props.name}, {props.country}
         </p>
       </div>
       <div className="weather-info">
-        <div className="temp">
-          {Math.round(props.temp)}&#176;
-        </div>
+        <div className="temp">{Math.round(props.temp)}&#176;</div>
         <div className="description">
           <img
             id="icon-big"
@@ -32,6 +33,7 @@ export const mapStateToProps = (state) => {
   const { description, main } = state.weather.weather;
   const { temp, humidity } = state.weather.main;
   const country = state.weather.sys.country;
+  const fetched = state.weather.weatherFetched;
   return {
     name,
     description,
@@ -39,6 +41,7 @@ export const mapStateToProps = (state) => {
     temp,
     humidity,
     country,
+    fetched,
   };
 };
 
