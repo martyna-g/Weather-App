@@ -1,16 +1,18 @@
-import React, { Fragment } from 'react';
-import SearchBar from '../containers/SearchBar';
-import Results from '../containers/Results';
-import Forecast from '../containers/Forecast';
-import '../App.css';
+import React, { Fragment } from "react";
+import SearchBar from "../containers/SearchBar";
+import Results from "../containers/Results";
+import Forecast from "../containers/Forecast";
+import "../App.css";
 
 function App() {
   return (
-    <Fragment>
-      <SearchBar />
-      <Results />
-      <Forecast />
-    </Fragment>
+    <div className="container">
+      <Fragment>
+        <SearchBar />
+        <Results />
+        <Forecast />
+      </Fragment>
+    </div>
   );
 }
 
