@@ -1,0 +1,36 @@
+.results {
+    text-align: center;
+    color: rgb(10, 106, 196);
+}
+.location {
+width: 100%;
+}
+#location{
+    font-size: 40px;
+}
+.weather-info {
+    width: 600px;
+    max-width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.temp {
+    font-size: 80px;
+}
+.description {
+    font-size: 30px;
+}
+
+@media (min-width: 900px) {
+    .results {
+        width: 50%;
+        margin: auto;
+    }
+    .temp {
+        font-size: 150px;
+    }
+    #location {
+        font-size: 50px;
+    }
+}
