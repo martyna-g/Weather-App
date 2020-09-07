@@ -1,6 +1,6 @@
 .searchBar {
     text-align: center;
-    margin-top: 40px;
+    margin-top: 8%;
 }
 form {
     box-sizing: border-box;
@@ -9,12 +9,15 @@ form {
     width: 500px;
     max-width: 90%;
     height: 35px;
+    padding-left: 10px;
     border-radius: 30px;
     border-color: rgb(0, 80, 184);
     font-size: 20px;
+    transition: 1s;
 }
 #searchInput:focus {
 outline: none;
+box-shadow: 1px 2px 10px 7px #54d6fd ;
 }
 #searchButton {
     height: 41px;
