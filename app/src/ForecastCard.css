@@ -1,0 +1,33 @@
+.outer {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 10px 0 10px 0;
+    padding: 10px 0 20px 0;
+    height: 200px;
+    background-color: rgba(71, 253, 253, 0.24);
+    border-radius: 10px;
+    float: left;
+    color: rgb(10, 106, 196);
+    box-shadow: 5px 10px 10px 10px #888888;
+}
+.outer p {
+   font-size: 18px;
+   font-weight: 500;
+}
+.outer p.temp {
+    font-size: 25px;
+}
+
+@media (min-width: 800px) {
+    .outer {
+        width:15%;
+        margin: 1% 2.5% 0 2.5%;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 799px) {
+    .outer {
+        width: 45%;
+        margin:2.5%
+    }
+}
