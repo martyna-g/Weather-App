@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { connect } from "react-redux";
-import ForecastCard from "../components/ForcastCard";
+import ForecastCard from "../components/ForecastCard";
 import "../Forecast.css";
 
 const Forecast = (props) => {
