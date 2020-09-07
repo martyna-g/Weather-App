@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import { fetchWeatherAPI } from "../actions/fetchWeather";
+import "../Search.css";
 
 export const SearchBar = (props) => {
   const [cityName, setCityName] = useState("");
@@ -9,14 +10,19 @@ export const SearchBar = (props) => {
     setCityName(e.target.value);
   };
   return (
-    <div>
+    <div className="searchBar">
       <form>
         <input
+          id="searchInput"
           type="text"
           placeholder="Enter city name"
           onChange={handleChange}
         />
-        <button type="button" onClick={() => props.fetchWeather(cityName)}>
+        <button
+          id="searchButton"
+          type="button"
+          onClick={() => props.fetchWeather(cityName)}
+        >
           Submit
         </button>
       </form>
